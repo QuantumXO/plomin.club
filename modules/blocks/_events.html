@@ -1,0 +1,19 @@
+<article class="main-events" id="mainEvents">
+	<div class="row clearfix">
+		<h3 class="main_events-title main-title"><span>заходи</span></h3>
+	</div>
+	<div class="main_events-slider" id="eventsSlider">
+		<?php 
+			while ($row = $stmt->fetch()){
+				echo '<div class="main_events-item">';
+				echo '<div class="row">';
+				echo "<img src=".$row['fileUpload']." class='main_events-img' width='571' height='299' alt=''>";
+				echo "<p class='main_events-topic'>".$row['posterTitle']."</p>";
+				echo "<div class='main_events-counter'><span class='main_events-date'>".$row['posterDate']."</span><span class='main_events-time'>".$row['posterTime']."</span></div>";
+				echo "<p class='main_events-content'>".$row['posterMsg']."</p>";
+				echo '</div><!-- //.row -->';
+				echo '</div><!-- //.main_events-item -->'; 
+			}
+		?>
+	</div><!-- //.main_events-slider -->
+</article>

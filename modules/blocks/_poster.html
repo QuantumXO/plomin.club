@@ -1,0 +1,41 @@
+<article class="main-poster" id="mainPoster">
+	<div class="row clearfix">
+		<div class="main_poster-container">
+			<h3 class="main_poster-title main-title"><span>афіша</span></h3>
+			<div class="widget-poster">
+				<div class="widget_poster-img"><img src="<?php echo $fileUpload_nearest ?>" width="571" height="299" alt="poster image"></div>
+				<div class="widget_poster-inner">
+					<p class="widget_poster-topic"><?php echo $posterTitle_nearest ?></p>
+					<div class="widget_poster-numbers">
+						<span class="widget_poster-date"><?php echo $posterDate_nearest_replace ?></span>
+						<span class="widget_poster-time"><?php echo $posterTime_nearest ?></span>
+					</div>
+					<p class="widget_poster-text"><?php echo $posterMsg_nearest ?></p>
+					<a href="<?php echo '//'.$posterLink_nearest ?>" class="widget_poster-btn" rel="nofollow" target="_blank"><span>долучитися</span><img src="img/fb-btn.png" width="24" height="45" alt="FB" class="icon"></a>
+				</div>
+			</div>
+		</div>
+		<aside class="main_poster-aside left">
+			<h4 class="poster_aside-title">раніше</h4>
+			<ul class="poster_aside-list">
+			<?php
+				while ($row_before = $stmt_before->fetch()){
+					echo '<li class="poster_aside-item"><label class="poster_aside-date">'.DateTime::createFromFormat('Y-m-d', $row_before['posterDate'])->format('d.m').'</label><br>';
+					echo '<div class="poster_aside-topic">'.$row_before['posterTitle'].'</div></li>';
+				}
+			?>	
+			</ul>
+		</aside>
+		<aside class="main_poster-aside right">
+			<h4 class="poster_aside-title">незабаром</h4>
+			<ul class="poster_aside-list">
+			<?php
+				while ($row_next = $stmt_next->fetch()){
+					echo '<li class="poster_aside-item"><label class="poster_aside-date">'.DateTime::createFromFormat('Y-m-d', $row_next['posterDate'])->format('d.m').'</label><br>';
+					echo '<div class="poster_aside-topic">'.$row_next['posterTitle'].'</div></li>';
+				}
+			?>	
+			</ul>
+		</aside>
+	</div>
+</article>

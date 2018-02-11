@@ -1,0 +1,98 @@
+/////////// Variables ///////////
+$QVGA: 320px  // x 240px
+$VGA:  640px  // x 480px
+$SXGA: 1280px // x 1024px
+$HDTV: 1920px // x 1080px
+
+
+
+
+$color-brand: #c1272d
+$color-font: #05070a
+
+
+.row
+	margin: 0 auto
+	max-width: 960px
+
+.clearfix:after
+	content: ""
+	clear: both
+	display: table
+ 
+	
+@font-face
+	font-family: 'FontAwesome'
+	src: url('fonts/fontawesome-webfont.eot?v=4.7.0')
+	src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg')
+	font-weight: normal
+	font-style: normal
+
+.fa
+	display: inline-block
+	font: normal normal normal 14px/1 FontAwesome
+	font-size: inherit
+	text-rendering: auto
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.fa-facebook:before
+	content: "\f09a"
+.fa-telegram:before
+	content: "\f2c6"
+.fa-vk:before
+	content: "\f189"
+.fa-instagram:before
+	content: "\f16d"
+.fa-youtube-play:before
+	content: "\f16a"
+.fa-envelope-o:before
+	content: "\f003"
+
+/////// LK /////////
+.fa-user:before
+	content: "\f007"
+.fa-lock:before
+	content: "\f023"
+/////////// Fonts ///////////
+@font-face
+	font-family: 'Room'
+	src: local('Room'),
+	url('fonts/Room.otf') format('opentype')
+	font-weight: 500
+	font-style: normal
+@font-face
+	font-family: 'Room'
+	src: local('Room'),
+	url('fonts/Room-Medium.otf') format('opentype')
+	font-weight: 600
+	font-style: normal
+@font-face
+	font-family: 'Room'
+	src: local('Room'),
+	url('fonts/Room-Bold.otf') format('opentype')
+	font-weight: 700
+	font-style: normal
+@font-face
+	font-family: 'AADuke-Fill'
+	src: local('AADuke-Fill'),
+	url('fonts/AADuke-Fill.otf') format('opentype')
+	font-weight: 500
+	font-style: normal
+
+$browser-context: 16 // Default (in px)
+
+@function em($pixels, $context: $browser-context)
+	@return #{$pixels/$context}em
+
+@mixin placeholder
+	&.placeholder 
+		@content
+	&:-moz-placeholder 
+		@content
+	&::-moz-placeholder 
+		@content
+	&:-ms-input-placeholder 
+		@content
+	&::-webkit-input-placeholder 
+		@content

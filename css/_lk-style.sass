@@ -1,0 +1,279 @@
+*, :after, :before
+	outline: none
+	box-sizing: border-box
+body
+	color: #606468
+	font: 400 em(16)/1 Room
+h3
+	display: inline-block
+	font: 600 em(30)/11.59px Room, sans-serif
+h4
+	display: inline-block
+	font: 600 em(23) Room, sans-serif
+input, button, textarea 
+	outline: none
+	@include placeholder
+		opacity: 1
+		color: #606468
+		text-transform: capitalize
+		transition: opacity .3s ease
+input:focus, button:focus, textarea:focus
+	@include placeholder
+		opacity: 0
+		transition: opacity .3s ease
+input[type=file]
+	//cursor: default
+.form_lk-body
+	display: flex
+	height: 100vh
+	align-items: center
+	flex-direction: row
+	justify-content: center
+	background-color: #2c3338
+.form_lk-main
+	width: 280px
+	height: 180px
+	//margin: 0 auto
+.form-lk
+	width: 280px
+	//margin: 150px auto
+	i.fa
+.form_lk-label	
+	float: left
+	width: 50px
+	height: 50px
+	display: block
+	line-height: 50px
+	text-align: center
+	background-color: #363b41
+	border-radius: 3px 0 0 3px
+.form_lk-login, .form_lk-pass
+	width: 230px
+	height: 50px
+	border: none
+	color: #606468
+	padding: 0 16px
+	font-size: em(15)
+	margin-bottom: 1em
+	background-color: #3b4148
+	border-radius: 0 3px 3px 0
+.form_lk-btn
+	color: #fff
+	width: 100%
+	border: none
+	height: 50px
+	cursor: pointer
+	letter-spacing: 1px
+	font: 700 em(15)/1 'Room'!important
+	border-radius: 3px
+	transition: background-color .3s ease-in-out
+	text-transform: uppercase
+	background-color: #ea4c88
+.form_lk-btn:hover	
+	background-color: #d44179
+///////////////////////////////////////////
+.lk_nav-aside
+	float: left
+	width: 200px
+	min-height: 100vh
+	border-right: 1px solid #eaeaea
+.lk_nav-list
+	padding: 30px 0
+.lk_nav-item
+	color: #05070a
+	display: list-item
+	//padding-bottom: 20px
+	list-style: disc outside
+.lk_nav-link:any-link
+	display: block
+	color: #05070a
+	text-decoration: none
+	padding: 10px 0 10px 25px
+	transition: all .3s ease-in-out
+	border-top: 1px solid transparent
+	border-bottom: 1px solid transparent
+.lk_nav-link:hover
+	padding-left: 35px
+	color: $color-brand
+////////////////////////////////////////////////////
+.main-container
+	//width: 100%
+	width: 520px
+	padding: 15px
+	position: relative
+	display: inline-block
+.lk-title
+	user-select: none
+	span 
+		color: $color-brand
+.main_tabs-container
+	.normal
+		color: $color-font
+		border-left-color: $color-font
+	.error
+		color: #ff0000
+		border-left-color: #ff0000
+	.success
+		color: #00a78d
+		border-left-color: #00a78d
+.main_tabs-notification
+	margin: 20px 0
+	text-align: left
+	min-height: 41px
+	overflow: hidden
+	border-radius: 3px
+	padding: 11px 15px
+	background-color: #fff
+	border-left: 4px solid transparent
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1)
+.main_tabs-content
+	display: none
+.main_tabs-content.active
+	display: block	
+.main_tabs-widget
+	padding: 11px 15px
+	position: relative
+	input, button
+		display: block
+.widget-block
+	overflow: hidden
+	border-radius: 3px
+	position: relative
+	margin-bottom: 20px
+	transition: box-shadow .3s linear
+	*
+		color: $color-font
+		letter-spacing: .3px
+		font: em(16)/2em 'Room'
+.widget-block:hover, .widget-block:active
+	.file_upload-btn, .video-btn
+		background-color: darken(#ddd, 10%)
+.widget_submit-btn, .file_upload-btn, .video-btn
+	width: 8em
+	border: 0
+	float: right
+	height: 100%
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+	background-color: #ddd
+	transition: background-color .2s ease-in-out
+.widget_submit-btn:hover, .widget_submit-btn:focus
+	background-color: darken(#ddd, 10%)
+.file_upload, .poster_link-input, .poster-msg
+	border: 1px solid #ccc
+	box-shadow: 0 0 5px rgba(0,0,0,0.1)
+.widget_poster-input, .video-input
+	width: 100%
+	height: 35px
+.file_upload, .video
+	height: 35px
+.file_upload.focus, .video.focus
+	box-shadow: 0 0 5px rgba(0,30,255,.4)
+.file_upload-info, .poster_title-input, .poster_date-input, .poster_time-input, .poster_msg-input, .poster_link-input, .video-input
+	padding-left: 1em
+.file_upload-input
+	top: 0
+	left: 0
+	opacity: 0
+	width: 100%
+	height: 100%
+	position: absolute
+	transform: scale(20)
+	letter-spacing: 10em
+	cursor: pointer
+.poster-date, .poster-time
+	float: left
+.poster-date
+	width: 26%
+	margin-right: 20px
+.poster-time
+	width: 19%
+.poster-msg
+	clear: both
+.poster_msg-input
+	width: 100%
+	height: 139px
+	resize: none
+	border: 0
+	//max-width: 458px
+	//min-width: 458px
+.poster-link
+	height: 35px
+.poster_link-input
+	width: 100%
+	height: 100%
+.publish-btn
+	float: right
+	cursor: pointer
+	border-radius: 3px
+.widget_poster-edit
+	input
+		padding: 2px 3px
+	.posterDate input, .posterTime input
+		width: 87.39px
+	textarea
+		width: 489px
+		height: 139px
+		max-width: 489px
+		max-height: 139px
+		min-width: 489px
+		min-height: 139px
+.widget_poster-all
+	left: -100px
+	position: absolute
+	border: 1px solid #eaeaea
+	background-color: #fff
+	z-index: 99
+	.table_tr-titles
+		td
+			text-align: center
+			border-bottom: 1px solid #eaeaea
+		td:not(:last-child)
+			border-right: 1px solid #eaeaea
+	tr:not(:last-child)
+		margin-bottom: 20px
+		border-bottom: 1px solid #eaeaea
+	td
+		padding: 5px
+		vertical-align: middle
+	td:not(:last-child)
+		margin-right: 20px
+		border-right: 1px solid #eaeaea
+	.image
+		max-width: 300px
+		img
+			width: 100%
+			height: auto
+	.posterTitle
+		min-width: 180px
+	.posterMsg
+		min-width: 500px
+	.posterDelete, .posterSave
+		a
+			display: inline-block
+////////////////////////////////////////////////////////
+.dropbox-wrap
+	width: 100%
+	height: 400px
+	display: flex
+	text-align: center
+	border-radius: 3px
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	background-color: #eee
+	border: 2px dashed #ccc
+	.file-name
+		color: #00a78d
+.dropbox-wrap.hover
+	border-color: #aaa
+	background-color: #ddd
+.dropbox-wrap.error 
+	border-color: #f00
+	background-color: #faa
+#dropZone.drop
+    border-color: #0f0
+    background-color: #afa
+	
+	

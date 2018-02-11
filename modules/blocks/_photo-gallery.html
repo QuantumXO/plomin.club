@@ -1,0 +1,26 @@
+<div id="photoGallery">
+	<div class="clearfix" id="fullPreview">
+		<a class="fullPreview-close"></a>
+		<img src="img/photo-9.jpg" class="fullPreview-img" alt="">
+		<p class="fullPreview-text"></p>
+	</div>
+	<ul class="photo_gallery-list" id="photoGalleryList">
+		<?php 
+			while($row = $stmt->fetch()){
+				echo "<li class='photo_gallery-item'>";
+				echo "<a href=".$row['thumbnail']." class='photo_gallery-link' data-largesrc=".$row['largeSrc']." data-title='".$row['title']."' data-description='".$row['description']."'></a>";
+				echo "<img src=".$row['thumbnail']." class='photo_gallery-img' width='1280' height='853' alt=".$row['alt']." />";	
+				echo "<div class='photo_gallery-overLayer'></div>";
+				echo "<div class='photo_gallery-infoLayer'><ul><li><h2>photo</h2></li><li><p>View Picture</p></li></ul></div></li>";
+			}
+	   ?>
+	</ul>
+	<ul class="photo_gallery-list" id="videoGalleryList">
+		<?php 
+			while($row2 = $stmt2->fetch()){
+				echo "<li class='photo_gallery-item video'><iframe width='240' height='164' src='".$row2['videoLink']."' class='' frameborder='0' allowfullscreen></iframe></li>";
+			}
+	   ?>
+	</ul>
+	<!--<a href="#" class="main_images-more" id="mainImagesMore">більше фото</a>-->
+</div>

@@ -1,0 +1,827 @@
+*, :after, :before
+	box-sizing: border-box
+body
+	//width: 1200px
+	//margin: 0 auto
+	position: relative
+	font: 500 em(16) Room, sans-serif
+input, textaea, button
+	outline: none
+h3
+	display: inline-block
+	font: 700 em(30)/11.59px Room, sans-serif
+h3.main-title
+	user-select: none
+	letter-spacing: .3px
+	text-transform: capitalize
+	span
+		margin-top: -2px
+		border-bottom: 3px solid #e12229
+h4
+	user-select: none
+	display: inline-block
+	font: 600 em(24) Room, sans-serif
+		
+//////////////////////////
+///// HEADER
+//////////////////////////
+header
+	width: 100%
+	//height: 600px
+.header-top
+	position: relative
+.header_nav-list
+	display: flex
+	justify-content: space-between
+.header_nav-link
+	display: block
+	padding-top: 11px
+	color: $color-font
+	//letter-spacing: .1px
+	text-decoration: none
+	text-transform: uppercase
+	font: 600 em(22)/59px 'Room'
+	border-bottom: 5px solid transparent
+.header_slider-wrap
+	background: #fff url(../img/block-bottom.png) no-repeat 0 bottom
+.header-slider
+	min-height: 440px
+.header_slider-item
+	width: 850px
+	height: 320px
+	display: flex
+	//margin-left: 46px
+	//overflow: hidden
+	position: relative
+	justify-content: space-between
+.header_slider-content
+	float: left
+	text-align: center
+	position: relative
+	.arrows
+		display: block
+		position: absolute
+		color: $color-brand
+		font: 500 em(50) 'Room'
+	.arrows:first-child
+		top: -34px
+		left: -28px
+		//float: left
+		//margin-right: 10px
+	.arrows:last-child
+		//float: right
+		bottom: -34px
+		right: -28px
+		//margin: -60px 0 0 1px
+		transform: rotate(180deg)
+.header_slider-text
+	margin-top: 15px
+	position: relative
+	letter-spacing: 1.1px
+	font: 500 em(24)/30px 'Room'
+.header_slider-img
+	top: -1px
+	right: 31px
+	float: right
+	//margin: -1px -29px 0 0
+	position: absolute
+	z-index: 9
+/* Slider */
+.slick-slider
+	display: block
+	user-select: none
+	position: relative
+	touch-action: pan-y
+	box-sizing: border-box
+	-khtml-user-select: none
+	-webkit-touch-callout: none
+	-webkit-tap-highlight-color: transparent
+	*
+		outline: none
+.slick-list
+	margin: 0
+	padding: 0
+	display: block
+	overflow: hidden
+	position: relative
+.slick-list:focus
+    outline: none
+.slick-list.dragging
+    cursor: hand
+    cursor: pointer
+.slick-slider .slick-track,
+.slick-slider .slick-list
+	transform: translate3d(0, 0, 0)
+.slick-track
+    top: 0
+    left: 0
+    display: block
+    margin-left: auto
+    margin-right: auto
+    position: relative
+.slick-track:before,
+.slick-track:after
+    display: table
+    content: ''
+.slick-track:after
+    clear: both
+.slick-loading .slick-track
+    visibility: hidden
+.slick-slide
+    float: left
+    //height: 100%
+    display: none
+    min-height: 1px
+[dir='rtl'] .slick-slide
+    float: right
+.slick-slide img
+    display: block
+.slick-slide.slick-loading img
+    display: none
+.slick-slide.dragging img
+    pointer-events: none
+.slick-initialized .slick-slide
+    display: block
+.slick-loading .slick-slide
+    visibility: hidden
+.slick-vertical .slick-slide
+    display: block
+    height: auto
+    border: 1px solid transparent
+.slick-arrow.slick-hidden 
+    display: none
+.slick-dots
+	//width: 100%
+	left: 256px
+	bottom: -56px
+	bottom: 60px
+	position: absolute
+	//margin: 38px 0 0 239px
+	//text-align: center
+	li
+		//margin-right: 054px
+		display: inline-block
+		background: url(../img/slider-dot.png) no-repeat center
+		button
+			border: none
+			cursor: pointer
+			background: none
+			opacity: 0
+	li:not(:last-child)
+		margin-right: 41px
+	li:nth-child(2)
+		margin-right: 46px
+	li:nth-child(3)
+		margin-right: 46px
+	.slick-active
+		background: url(../img/slider-dot-active.png) no-repeat center
+
+/////////////////////////////////////////////////////////////////
+.main-whowe
+	text-align: center
+	position: relative
+	background: #040201 url(../img/whoWe-bg.png) no-repeat center
+	background-size: cover
+.main-whowe:after
+	left: 0
+	bottom: -88px
+	width: 100%
+	content: ''
+	height: 88px
+	position: absolute
+	background: url(../img/whoWe-bottom.png) no-repeat 0
+	background-size: 100% 100%
+.main_whowe-list
+	margin-top: 67px
+.main_whowe-item
+	float: left
+	//display: inline-block
+.main_whowe-item:first-child
+.main_whowe-item:nth-child(2)
+	margin-top: -5px
+.main_whowe-item:nth-child(3)
+	margin-top: 1px
+.main_whowe-item:nth-child(4)
+	.main_whowe-topic
+		margin-top: 4px
+.main_whowe-title
+	color: #fff
+	margin-left: -7px
+.main_whowe-list
+	text-align: left
+.main_whowe-label
+	text-align: center
+.main_whowe-ico
+	display: block
+	margin: 0 auto
+.main_whowe-topic
+	color: #fff
+	//margin-top: 7px
+	//margin-top: 23px
+	padding-bottom: 2px
+	display: inline-block
+	letter-spacing: 1.7px
+	border-bottom: 3px solid #e12229
+	font: 500 em(14.03) Room, sans-serif
+.main_whowe-content
+	color: #fff
+	margin-top: 11px
+	text-align: center
+	letter-spacing: .25px
+	font: 500 em(14)/14px Room, sans-serif
+.header_slider-text
+	padding-left: 10px	
+.main_whowe-slogan
+	color: #fff
+	text-align: center
+	margin-top: 3px
+	letter-spacing: .25px
+	font: 500 em(14)/14px Room, sans-serif
+
+/////////////////////////////////////////////////////////////////
+.main-events
+	text-align: center
+	position: relative
+	background: url(../img/block-bottom.png) no-repeat 0 bottom
+	z-index: 99
+/*.main-events:after
+	left: 0
+	bottom: 120px
+	content: ''
+	width: 100%
+	height: 175px
+	position: absolute
+	z-index: 1*/
+.main_events-title
+	//top: 3px
+	//left: 546px
+	left: 50%
+	margin-left: -52.085px
+	color: $color-font
+	position: absolute
+	z-index: 999
+.main_events-slider
+	text-align: left
+	margin: 0 auto
+.main_events-item
+	overflow: hidden
+	position: relative
+	//background: url(../img/events-bg-1.png) no-repeat 0 0
+	//background-size: 100% auto
+	.row
+		text-align: center
+.main_events-item:nth-child(3)
+	//background: url(../img/events-bg-2.png) no-repeat
+	//background-position: right 0
+.main_events-item.center
+	.main_events-img:first-child
+		left: 0
+	.main_events-img
+		right: 0
+		width: 26%
+	.main_events-inner
+		margin: 0 auto
+.main_events-item.right
+	.main_events-img:first-child
+		left: 587px
+	.main_events-img
+		width: 36%
+	.main_events-counter
+		//float: right
+		width: 100%
+		//text-align: center
+		display: inline-block
+.main_events-item.left
+	.main_events-img:first-child
+		left: 0
+	.main_events-img
+		width: 29%
+	.main_events-inner
+		margin: 0 auto
+.main_events-img
+	//top: 0
+	width: 381px
+	height: 199.5px
+	//position: absolute
+	//box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41)
+	margin: 0 auto
+.main_events-topic
+	margin-top: 15px
+	display: inline-block
+	text-transform: uppercase
+	font: 500 em(30)/36px 'AADuke-Fill', sans-serif
+.main_events-content
+	height: 93px
+	margin-top: 13px
+	overflow: hidden
+	white-space: pre-line
+	text-overflow: ellipsis
+	font: 500 em(14)/17px 'Room', sans-serif
+.main_events-counter
+	clear: both
+	margin-top: 0
+	overflow: hidden
+.main_events-date, .main_events-time
+	position: relative
+	color: $color-brand
+	letter-spacing: .1px
+	font: 500 em(40) 'AADuke-Fill', sans-serif
+	.month
+		margin: 0 3px 0 3px
+.main_events-btn, .main_images-more
+	border: 0
+	color: #fff
+	width: 218px
+	height: 40px
+	margin-top: 8px
+	padding: 0 16px
+	padding: 0 10px
+	text-align: center
+	letter-spacing: .3px
+	text-decoration: none
+	display: inline-block
+	text-transform: uppercase
+	background-color: #c1272c
+	font: 700 em(18)/40px 'Room', sans-serif
+	transition: background-color .3s ease-in-out
+	cursor: pointer
+	z-index: 999
+	span
+		//float: left
+	.icon
+		float: right
+		width: 11px
+		height: auto
+		margin: 8px 4px 0 0px
+.main_events-btn:hover, .main_images-more:hover
+	background-color: #000
+.events-dots
+	z-index: 999
+/////////////////////////////////////////////////////////////////
+.main-gallery
+	min-height: 300px
+	//margin-top: -120px
+	text-align: center
+	position: relative
+	background: #000 url(../img/gallery-bg.jpg) no-repeat center
+	background-attachment: fixed
+	background-size: cover
+	z-index: 99
+.main_gallery-list
+	margin-left: -6px
+	text-align: center
+	*
+		outline: none
+.main_gallery-tab
+	color: #fff
+	display: inline-block
+.main_gallery-tab:first-child
+	margin-right: 31px
+.main_gallery-link:any-link
+	color: #fff
+	letter-spacing: .3px
+	text-decoration: none
+	font: 600 em(30.02) 'Room'
+.ui-state-active
+	.main_gallery-link:any-link
+		border-bottom: 3px solid #e12229
+.main_gallery-slider
+	margin-top: 52px
+	.slick-current
+		position: relative
+		z-index: 99
+	.slick-slide:not(.slick-active)
+		visibility: hidden
+.main_gallery-item
+	border: 1px solid #c1272c
+.main_gallery-img
+	width: 100%
+	height: auto
+.main_gallery-arrow
+	top: 50%
+	border: 0
+	width: 25px
+	height: 35px
+	cursor: pointer
+	position: absolute
+	margin-top: -16.5px
+	background-color: transparent
+	z-index: 99
+.main_gallery-prev
+	left: 4px
+	background: url(../img/arrow-left.png) no-repeat center
+.main_gallery-next
+	right: 10px
+	background: url(../img/arrow-right.png) no-repeat center
+.main_images-gallery	
+	//top: 70px
+	display: flex
+	//margin: 0 auto
+	min-height: 400px
+	position: relative
+	flex-flow: row wrap
+	justify-content: space-around
+.main_images-item 
+	float: left
+	width: 250px
+	height: 166px
+	flex-grow: 0
+	flex-shrink: 0
+	flex-basis: 250px
+	#image-1 
+		//left: 0
+	#image-2 
+		//left: 290px
+	#image-3 
+		//left: 580px
+.main_images-item:last-child
+	//margin-left: 10p
+	//margin-right: 0
+.main_images-content
+	top: auto
+	padding: 1px
+	width: inherit
+	height: inherit
+	position: absolute
+	background: #c1272c
+	transition: all ease-in-out .5s
+	font-family: Arial, sans-serif
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+.main_images-img
+	width: 100%
+	height: 100%
+	//border-radius: 5px
+.main_images-close:any-link
+	top: 20px
+	right: 20px
+	width: 20px 
+	height: 20px
+	float: right
+	width: auto
+	height: auto
+	color: #fff
+	display: none
+	font-weight: bold
+	padding: 5px 10px 4px
+	position: absolute
+	//border-radius: 5px
+	border-radius: 50%
+	background-color: #c1272c
+	text-decoration: none
+	text-decoration: none
+	z-index: 9999
+.main_images-close:hover
+	color: #c1272c
+	background-color: #fff
+	box-shadow: 0 0 20px #fff
+.main_images-expand
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: block
+	cursor: pointer
+	position: absolute
+	background: rgba(0,0,0,0) /* Фиксы для IE */
+	z-index: 99
+[id^=image]:target
+	.close
+		display: block
+#image-1:target, #image-2:target, #image-3:target  
+	left: 200px 
+.main_images-more
+	margin-top: 20px
+	//bottom: -64px
+	//position: absolute
+/////////////////////////////////////////////////////////////////	
+footer
+	bottom: 0
+	//margin-top: 64px
+	position: relative
+	//background-color: #474747
+	.row
+		position: relative
+.google-map
+	float: left
+	height: 300px
+	margin: 100px 0 110px
+	border: 1px solid #c1272c
+.footer-map
+	z-index: 99
+.footer-bottom
+	width: 100%
+	overflow: hidden
+	//height: 190px
+	position: relative
+	background: #c2262c //url(../img/footer-bottom.png) no-repeat
+	z-index: 99
+.footer-inner
+	overflow: hidden
+	//position: relative
+.footer-slogan
+	color: #fff
+	letter-spacing: .3px
+	font: 700 em(30) 'Room'
+	span:first-child
+		margin-left: 7px
+	span:nth-child(2)
+		margin-left: 2px
+	span:nth-child(3)
+		margin-left: 2px
+.footer-item
+	display: inline-block
+.footer_item-link
+	color: #fff
+	padding: 4px
+	display: block
+	font-size: em(32)
+	text-decoration: none
+	border: 2px solid transparent
+.footer_item-link:not(:last-child)
+	margin-right: 10px
+.footer_item-link:hover
+	text-shadow: 0 0 20px #fff
+.footer_item-link.fb
+	width: 28px
+	height: 45px
+	background: transparent url(../img/footer-fb.png) no-repeat center
+.footer_item-link.tg
+	width: 49px
+	height: 37px
+	background: transparent url(../img/footer-tg.png) no-repeat center
+.footer_item-link.vk
+	width: 60px
+	height: 30px
+	background: transparent  url(../img/footer-vk.png) no-repeat center
+.footer_item-link.inst
+	width: 30px
+	height: 30px
+	background: transparent url(../img/footer-inst.png) no-repeat center
+.footer_item-link.yt
+	width: 45px
+	height: 30px
+	background: transparent url(../img/footer-yt.png) no-repeat center
+.footer_item-link.mail
+	width: 42px
+	height: 30px
+	background: transparent url(../img/footer-mail.png) no-repeat center
+///////////////////////////////////////////////////////////////////////////////////////////
+.main-poster
+	background: #000 url(../img/poster-bg-2.jpg) 0 0 no-repeat
+	background-size: 100% auto
+	.row
+		max-width: 1170px
+		min-height: 1450px
+		position: relative
+.main_poster-aside
+	width: 300px
+	text-align: center
+	padding: 266px 30px 0 30px
+.main_poster-aside.left
+	left: 0
+	float: left
+	position: absolute
+.main_poster-aside.right
+	float: right
+.poster_aside-title
+	color: #fff
+.poster_aside-list
+	margin-top: 39px
+.poster_aside-item
+	color: #fff
+	padding: 39px 39px
+.poster_aside-item:not(:last-child)
+	border-bottom: 1px solid #6d6d6e
+.poster_aside-date, .poster_aside-topic
+	text-transform: uppercase
+	border-bottom: 2px solid #fff
+.poster_aside-topic
+	margin-top: 7px
+	display: inline-block
+.main_poster-container
+	width: 100%
+	padding-top: 100px
+	min-width: 570px
+	text-align: center
+	position: absolute
+.main_poster-title
+	color: #fff
+.widget-poster
+	padding: 0 300px
+	margin-top: 113px
+.widget_poster-inner
+	color: #fff
+	text-align: left
+.widget_poster-topic
+	margin-top: 10px
+	font: em(48) 'AADuke-Fill'
+.widget_poster-numbers
+	margin-top: 10px
+	font: em(48) 'AADuke-Fill'
+.widget_poster-text
+	margin-top: 10px
+	white-space: pre-line
+	font: 700 em(16) 'Room'
+.widget_poster-btn:any-link
+	color: #fff
+	width: 178px
+	height: 40px
+	float: right
+	padding: 0 10px
+	text-align: center
+	margin-top: 40px
+	letter-spacing: .3px
+	text-decoration: none
+	display: inline-block
+	background-color: #c1272c
+	text-transform: uppercase
+	font: 700 1.125em/40px "Room", sans-serif
+	cursor: pointer
+	.icon
+		width: 11px
+		float: right
+		height: auto
+		margin: 8px 4px 0 0
+.widget_poster-btn:hover
+	background-color: darken(#c1272c, 10%)
+/////////////////////////////////////////////////////////////
+.main_gallery-title
+	color: #fff
+.gallery
+	.row
+		padding: 60px 0 20px!important
+.gallery-photo
+	margin-top: 30px
+.photo_gallery-list
+	margin-bottom: 20px
+.photo_gallery-item
+	width: 250px
+	height: 164px
+	padding: 0 5px
+	position: relative
+	margin-bottom: 10px
+	vertical-align: top
+	display: inline-block
+	iframe
+		margin-left: -20px
+		//width: 100%
+.photo_gallery-item:hover
+	.photo_gallery-infoLayer
+		opacity: 1
+	.photo_gallery-overLayer
+		opacity: .6
+		background-color: #808080
+.photo_gallery-link
+	left: 5px
+	top: 10px
+	width: 240px
+	height: 164px
+	display: block
+	position: absolute
+	overflow: hidden
+	border: 1px solid #c1272c
+	z-index: 6
+.photo_gallery-img
+	width: 240px
+	height: 164px
+	margin: 10px 10px 0 0
+.photo_gallery-overLayer, .photo_gallery-infoLayer
+	top: 10px
+	opacity: 0
+	width: 240px
+	height: 164px
+	position: absolute
+	text-align: center
+	transition: opacity 0.3s linear
+	z-index: 4
+.photo_gallery-infoLayer
+	color: #fff
+	font-size: em(18)
+	padding-top: 57px
+	li
+		width: 200px
+		margin: 0 auto
+		display: block
+	li:first-child
+		padding: 0 0 5px 0
+		text-transform: uppercase
+		border-bottom: 2px white solid
+	li:last-child
+		padding: 5px 0 0 0
+		text-transform: lowercase
+.photo_gallery-projectInfo
+	display: none
+.main_gallery-photo
+	position: relative
+.main-gallery.gallery
+	background: #2f2929 url(../img/gallery-bg.jpg) center/cover no-repeat fixed!important
+.photo_gallery-arrow
+	top: 50%
+	border: 0
+	width: 25px
+	height: 35px
+	cursor: pointer
+	position: absolute
+	margin-top: -16.5px
+	background-color: transparent
+	z-index: 99
+.photo_gallery-prev
+	left: 4px
+	background: url(../img/arrow-left.png) no-repeat center
+.photo_gallery-next
+	right: 4px
+	background: url(../img/arrow-right.png) no-repeat center
+#fullPreview
+	left: 0
+	width: 100%
+	//display: none
+	position: relative
+	box-shadow: 0 0 10px
+	padding: 50px 0 30px 0
+	background-color: rgba(#333333, .5)
+	border-top: 2px solid #333333
+	border-bottom: 2px solid #333333
+.fullPreview-img
+	width: 80%
+	height: auto
+	margin: 0 auto
+	//max-height: 434px
+	max-width: 960px
+	position: relative
+	border: 1px solid #c1272c
+	z-index: 9
+.fullPreview-text
+	bottom: 33px
+	left: 97px 
+	color: #fff
+	margin: 0 auto 0
+	width: calc(80% - 2px)
+	padding: 10px 30px
+	position: absolute
+	background-color: rgba(#000, .4)
+	z-index: 99
+.fullPreview-close
+	top: 10px
+	right: 20px
+	width: 30px
+	height: 30px
+	display: none
+	cursor: pointer
+	position: absolute
+	background: url(../img/close.png)
+	background-size: 100%
+	z-index: 99
+/////////////////////////////////////////////////
+.main-contacts
+	background: #fff url(../img/contacts-bg.jpg) center/cover no-repeat fixed
+	.contacts-inner
+		padding: 15px 0 25px
+		margin: 0 auto
+		width: 100%
+		display: flex
+		text-align: center
+		flex-direction: row
+		justify-content: space-between
+	.contacts-title
+		color: #fff
+		width: 100%
+		margin-top: 60px
+		text-align: center
+	.google-map
+		//margin-left: -110px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
